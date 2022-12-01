@@ -22,6 +22,9 @@ const routes: Routes = [
     path:'bindingform/:id',
     component: BindingsComponent
   },
+  {
+    path:'admin', loadChildren:()=>import('./lazyLoading/admin/admin.module').then(mod=>mod.AdminModule)
+  },
   
 ];
 
