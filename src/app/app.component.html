@@ -1,3 +1,30 @@
-<app-restaurant-dash>
+<h1> {{title}}</h1>
+<a routerLink="">Restaurant</a>&nbsp;
+<a routerLink="templatedriven">Template</a>&nbsp;
+<a routerLink="reactiveform">Reactive</a>&nbsp;
+<a [routerLink]="['bindingform',1]">Binding</a>&nbsp;
+
+<router-outlet></router-outlet>
+<!-- <app-restaurant-dash>
   
-</app-restaurant-dash>
+</app-restaurant-dash> -->
+
+<!-- Bindings Demo -->
+<!-- <app-bindings>
+    
+</app-bindings> -->
+
+<!-- Child Component Calling -->
+<!-- <app-child-component (updateDataEvent)= "updateDataParentToChild($event)" [item] = "passDataToChild">
+
+</app-child-component> -->
+
+<!-- Template Driven Form -->
+<!-- <app-template-driven>
+
+</app-template-driven> -->
+
+<!-- Reactive Form -->
+<!-- <app-reactive-form>
+
+</app-reactive-form> -->

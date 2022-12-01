@@ -1,0 +1,58 @@
+<form role="form" (submit)="login()">
+    <input type="text" (keyup)="onKeyUserName($event)" name="username" id="username" required="required" [(ngModel)]="credentials.username"/>
+    <input type="password" name="password" id="password" required="required" [(ngModel)]="credentials.password" />
+    <button type="submit">Sign in</button>
+  </form>
+
+  <!-- Event Binding -->
+  <p>{{name}}</p>
+  <p>{{credentials.password}</p>
+
+  <!-- Property Binding -->
+  <input type="text" name ="user_name" value={{proBinding}} disabled={{proDisable}}/>
+  <br /> <br />
+  <input type="text" name ="user_name" [value]=proBinding [disabled]=proDisable/>
+
+  <!-- ngIfElse -->
+  <h1 *ngIf="show else elseBlock">
+    Test Ng If Else
+  </h1>
+
+  <ng-template #elseBlock>
+       <h1>Else Block</h1>
+  </ng-template>
+
+  <!-- ngFor -->
+  <h3 *ngFor="let item of users">
+      {{item}}
+  </h3>
+
+  <!-- ngClass -->
+  <h3 [ngClass] = "'one'">
+       Test Ng Class
+  </h3>
+
+  <!-- ngStyle -->
+  <h3 [ngStyle] = "{'font-size.px':14 ,'font-style':'italic', 'color': 'red'}">
+       Test Ng Class
+  </h3>
+
+  <!-- Custome Directives -->
+<h3 appRedel>
+  Custome Directives
+</h3>
+<p>
+  Custome Directives
+</p>
+<p appRedel>
+  Custome Directives
+</p>
+
+<!-- Pipes -->
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<p>{{date | date}}</p>
+
+<div *ngIf="notify" class="alert alert-success">
+  {{ notify }}
+</div>

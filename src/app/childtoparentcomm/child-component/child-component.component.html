@@ -1,0 +1,8 @@
+<!-- Input Emitter -->
+<p>child-component works! {{item}}</p>
+
+<!-- Output Emitter -->
+<input type="text" #box />
+<button (click)="updateDataEvent.emit(box.value)">
+    Update Data
+</button>

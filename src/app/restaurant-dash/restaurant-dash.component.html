@@ -70,7 +70,6 @@
     </tbody>
 </table>
 
-s
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -80,27 +79,27 @@ s
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form [formGroup] = "formValue">
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Name</label>
-                        <input type="text" class="form-control" placeholder="Restaurant Name Here"
+                        <input type="text" formControlName="name" class="form-control" placeholder="Restaurant Name Here"
                             id="exampleInputName">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" placeholder="Email" id="exampleInputEmail">
+                        <input type="email" formControlName="email" class="form-control" placeholder="Email" id="exampleInputEmail">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputMobile" class="form-label">Mobile</label>
-                        <input type="number" class="form-control" placeholder="Enter mobile" id="exampleInputMobile">
+                        <input type="number" formControlName="mobile" class="form-control" placeholder="Enter mobile" id="exampleInputMobile">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control" placeholder="Enter Address" id="exampleInputAddress">
+                        <input type="text" formControlName="address" class="form-control" placeholder="Enter Address" id="exampleInputAddress">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputServices" class="form-label">Services</label>
-                        <input type="text" class="form-control" placeholder="Enter Services" id="exampleInputServices">
+                        <input type="text" formControlName="service" class="form-control" placeholder="Enter Services" id="exampleInputServices">
                     </div>
                 </form>
             </div>
