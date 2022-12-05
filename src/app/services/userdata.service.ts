@@ -1,11 +1,23 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserdataService {
 
-  constructor() { }
+  constructor(private httpClient : HttpClient) { 
+
+  }
+
+  signUpData(data : any) : Observable<any>{
+   return this.httpClient.post<any>("http://localhost:3000/signup",data)
+  }
+
+  login():Observable<any>{
+   return this.httpClient.get<any>("http://localhost:3000/signup")
+  }
 
   users(){
     return[{name:'User1',age :'28',email:'user1@gmail.com'},

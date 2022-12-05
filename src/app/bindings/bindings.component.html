@@ -1,5 +1,5 @@
 <form role="form" (submit)="login()">
-    <input type="text" (keyup)="onKeyUserName($event)" name="username" id="username" required="required" [(ngModel)]="credentials.username"/>
+    <input #inputLogin type="text" (keyup)="onKeyUserName($event)" name="username" id="username" required="required" [(ngModel)]="credentials.username"/>
     <input type="password" name="password" id="password" required="required" [(ngModel)]="credentials.password" />
     <button type="submit">Sign in</button>
   </form>

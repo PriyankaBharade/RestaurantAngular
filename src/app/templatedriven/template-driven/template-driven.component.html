@@ -1,5 +1,4 @@
 <form #loginForm="ngForm" (ngSubmit) = userLogin(loginForm.value)>
-
     <input type="text" placeholder="Enter Name" name="name" ngModel/>
     <br/><br/>
     <input type="password" placeholder="Enter Password" name="password" ngModel/>
@@ -8,4 +7,11 @@
     >Login</button>
 </form>
 
+
 <button (click) = userLogin(loginForm.value)>Login</button>
+
+<p>Hip!</p>
+<ng-template>
+  <p>Hip!</p>
+</ng-template>
+<p>Hooray!</p>

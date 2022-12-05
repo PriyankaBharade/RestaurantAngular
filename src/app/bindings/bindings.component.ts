@@ -1,11 +1,11 @@
-import { Component,OnInit } from '@angular/core';
+import { AfterViewInit, Component,ElementRef,OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-bindings',
   templateUrl: './bindings.component.html',
   styleUrls: ['./bindings.component.css']
 })
-export class BindingsComponent {
+export class BindingsComponent implements AfterViewInit{
   title ='Binding Demo'
   name=''
   pass=''
@@ -23,6 +23,14 @@ export class BindingsComponent {
 
   //Pipes
   date = Date()
+
+  
+  //@ViewChild
+  @ViewChild('inputLogin') elementRef! : ElementRef
+
+  ngAfterViewInit(){
+   this.elementRef.nativeElement.focus()
+  }
 
   constructor(private route: ActivatedRoute){
 

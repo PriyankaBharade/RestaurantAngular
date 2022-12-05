@@ -4,6 +4,11 @@ import { TemplateDrivenComponent } from './templatedriven/template-driven/templa
 import { ReactiveFormComponent } from './reactiveform/reactive-form/reactive-form.component';
 import { BindingsComponent } from './bindings/bindings.component';
 import { RestaurantDashComponent } from './restaurant-dash/restaurant-dash.component';
+import { LoginComponent } from './login/login/login.component';
+import { SignupComponent } from './signup/signup/signup.component';
+import { CustomepipesComponent } from './customepipes/customepipes.component';
+import { NestedroutingComponent } from './nestedrouting/nestedrouting.component';
+import { LaptopComponent } from './nestedrouting/laptop/laptop.component';
 
 const routes: Routes = [
   {
@@ -24,6 +29,30 @@ const routes: Routes = [
   },
   {
     path:'admin', loadChildren:()=>import('./lazyLoading/admin/admin.module').then(mod=>mod.AdminModule)
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
+    path:'signup',
+    component: SignupComponent
+  },
+  {
+    path:'customepipe',
+    component: CustomepipesComponent
+  },
+  {
+    path:'nestedrouting',
+    children:[
+      {
+        path:'',
+        component:NestedroutingComponent
+      },
+      {
+      path:'laptop',
+      component:LaptopComponent
+    }]
   },
   
 ];
